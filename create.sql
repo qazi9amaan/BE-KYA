@@ -1,0 +1,6 @@
+CREATE TABLE `bekus`.`visitors` ( `id` INT(11) NOT NULL AUTO_INCREMENT , `fname` VARCHAR(255) NOT NULL , `lname` VARCHAR(255) NOT NULL , `sex` VARCHAR(255) NOT NULL , `bday` VARCHAR(255) NOT NULL , `upload_date` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP , PRIMARY KEY (`id`)) ENGINE = InnoDB; 
+CREATE TABLE `bekus`.`admins` ( `id` INT(11) NOT NULL AUTO_INCREMENT , `username` VARCHAR(255) NOT NULL , `password` VARCHAR(255) NOT NULL , PRIMARY KEY (`id`), UNIQUE (`username`)) ENGINE = InnoDB;
+
+CREATE TABLE `bekus`.`contributors` ( `id` INT(11) NOT NULL AUTO_INCREMENT , `name` VARCHAR(255) NOT NULL , `instagram_id` VARCHAR(255) NULL DEFAULT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
+
+CREATE TABLE `bekus`.`compliments` ( `id` INT(20) NOT NULL AUTO_INCREMENT , `sex` VARCHAR(10) NOT NULL , `value` TEXT NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
